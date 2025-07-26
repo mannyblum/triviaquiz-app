@@ -1,5 +1,7 @@
+import TriviaQuiz from "./components/TriviaQuizApp";
+
 function App() {
-  return <div></div>;
+  return <TriviaQuiz />;
 }
 
 export default App;

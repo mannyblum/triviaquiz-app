@@ -1,69 +1,58 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About this Project
+  I queried some generative AI and asked it to provide me with checklist to achieve an MVP. This is what it gave me. Eventual goal is to have completed all of these items.
 
-Currently, two official plugins are available:
+ 1. Core Features
+  [x] Home Page
+    [x] App title and brief description
+    [x] “Start Quiz” button
+  [x] Question Interface
+    [x] Display one question at a time
+    [x] Multiple choice answers (radio buttons or buttons)
+    [x] “Next” button (disabled until an answer is selected)
+    [x] Question counter (e.g. “Question 3 of 10”)
+  [x] Score Tracking
+    [x] Track correct/incorrect answers
+    [x] Calculate final score
+    [x] Store results in state
+  [x] Results Page
+    [x] Final score summary
+    [x] Percentage or letter grade
+    [x] Option to restart quiz
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 2. Data Handling
+  [x] Use local JSON or external API for question/answer data
+  [x] Shuffle questions and/or answers
+  [x] Support multiple question types (optional):
+    [x] Multiple choice
+    [x] True/False
+    [ ] Fill-in-the-blank (stretch goal)
 
-## Expanding the ESLint configuration
+ 3. UI/UX
+  [x] Mobile-first responsive layout
+  [x] Progress indicator (e.g., progress bar)
+  [x] Visual feedback on answer selection (e.g., highlight rrect/wrong)
+  [x] Loading state (if fetching data)
+  [x] Transition animations between questions (optional)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+ 4. State Management
+  [x] Use useState and useEffect for managing:
+    [x] Current question index
+    [x] Selected answer
+    [x] Score
+    [x] Quiz completion status
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+ 5. Bonus Features (Optional but Impressive)
+  [x] Categories/Difficulty selection
+  [ ] Timer for each question
+  [ ] Leaderboard (localStorage or backend)
+  [ ] User authentication (e.g., with Firebase)
+  [ ] Dark mode toggle
+  [ ] Accessibility (keyboard nav, ARIA labels)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ 6. Tech Stack Highlights
+  [x] React components for each screen (Home, Quiz, Result)
+  [x] CSS Modules, Tailwind, or styled-components for styling
+  [x] JavaScript logic for scoring and transitions
+  [x] Optional: TypeScript for type safety
