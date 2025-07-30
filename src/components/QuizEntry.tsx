@@ -6,17 +6,9 @@ import { shuffle } from "lodash-es";
 import { motion, type Variants } from "motion/react";
 import { useMemo, useState } from "react";
 import { twMerge } from "tailwind-merge";
+import type { QuizEntryProps } from "../types/Quiz";
 
 const indexToLetter = (index: number) => String.fromCharCode(97 + index);
-
-export type QuizEntryProps = {
-  category: string;
-  correct_answer: string;
-  difficulty: string;
-  incorrect_answers: string[];
-  question: string;
-  type: string;
-};
 
 const slideVariants: Variants = {
   initial: {
