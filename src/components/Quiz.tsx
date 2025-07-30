@@ -2,10 +2,10 @@ import { Button } from "antd";
 import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 
-import type { QuizEntryProps } from "./QuizEntry";
 import QuizEntry from "./QuizEntry";
 import QuizHeader from "./QuizHeader";
 import QuizProgress from "./QuizProgress";
+import type { QuizEntryProps } from "../types/Quiz";
 
 export const QUESTION_COUNT: number = 10;
 

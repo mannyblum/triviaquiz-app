@@ -1,6 +1,5 @@
 import { decode } from "html-entities";
-
-import type { QuizEntryProps } from "./QuizEntry";
+import type { QuizEntryProps } from "../types/Quiz";
 
 export default function QuizHeader({
   quiz,
