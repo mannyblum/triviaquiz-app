@@ -1,4 +1,4 @@
-import TriviaQuiz from "./components/TriviaQuizApp";
+import TriviaQuiz from "./TriviaQuiz";
 
 function App() {
   return <TriviaQuiz />;
