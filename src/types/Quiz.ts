@@ -1,4 +1,4 @@
-import { QuizEntryProps } from '@/components/TriviaQuiz/QuizEntry';
+import type { QuizEntryProps } from "../components/QuizEntry";
 
 export type QuizResponse = {
   response_code: number;
