@@ -118,13 +118,12 @@ export default function TriviaQuizApp() {
 
   return (
     <div className="flex flex-col text-quiz-base-content w-full h-full bg-black p-5">
-      <div className="trivia-wrapper w-[393px] h-full my-0 mx-auto bg-quiz-base-200 border-quiz-base-300 rounded-2xl">
+      <div className="trivia-wrapper w-[500px] h-full my-0 mx-auto bg-quiz-base-200 border-quiz-base-300 rounded-2xl">
         <>
           {isQuizActive ? (
             renderQuiz()
           ) : (
             <div className="py-4">
-              <h1 className="text-4xl mb-4 mx-auto text-center ">TriviaQuiz</h1>
               <CategorySelector
                 onSelectCategory={handleSelectCategory}
                 selectedId={selectedId}
